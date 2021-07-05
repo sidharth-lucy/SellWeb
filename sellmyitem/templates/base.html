@@ -7,27 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
     {% block style %} {% endblock %}
 </head>
 <body>
     
     <header>
-        <nav class="nav navbar-nav static">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
             
-            <a class='nav navbar-brand' href="">
-                
-                <img src="{% static 'logo.png' %}" width='50' height="50" alt=""> 
-               Home
+            <a class='navbar-brand' href="">
+                <div class="home"><img src="{% static 'logo.png' %}" width='50' height="50" alt=""> Home</div>
             </a>
 
-            <ul class="nav navbar-nav right">
-                <li><a href="">Login/SignUp</a></li>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 
-                <img src="{% static 'logo.png' %}" width="50" height="50" alt="">
-                <li><a href="">@name</a></li>
-                <li><a href="">Your item</a></li>
-                <li><a href="">Yor Basket</a></li>
-            </ul>
+            <div class="nav navbar-nav ml-auto">
+                
+                <a class="nav-itema" href="">Login/SignUp</a>
+                
+                <a class="nav-itema" href="">Your item</a>
+                <a class="nav-itema" href="">Yor Basket</a>
+                <a class="nav-itema" href="">@name</a>
+                <a class="nav-itema right" href=""><img src="{% static 'logo.png' %}" width="50" height="50" alt=""></a>
+           
+            </div>
+            </div>
+            
+                
 
         </nav>
     </header>
